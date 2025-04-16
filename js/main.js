@@ -299,9 +299,10 @@
 		owlCrouselFeatureSlide();
 	});
 
-	$("form").submit(function(ev){
+	$("form").children().click(function(ev){
 		ev.preventDefault();
-		alert("Submit the form in this host is not working, please use the Email address: joseluis_c_garcia@hotmail.com");
+		$("form input, form textarea").prop('disabled', true);
+		alert("In this host the form is not working, please use the Email address: joseluis_c_garcia@hotmail.com");
 	});
 
 
